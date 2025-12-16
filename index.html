@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestión de citas - DavanteDent</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- CABECERA -->
+    <header>
+        <img src="logo.png" alt="DavanteDent" id="logo">
+        <h1>Gestión de citas - Clínica DavanteDent</h1>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- FORMULARIO DE CITAS -->
+        <section id="formulario">
+            <h2>Nueva cita</h2>
+            <form id="formcita">
+                <!-- campo oculto para edición -->
+                <input type="hidden" id="citaId" value="">
+
+                <fieldset>
+                    <legend>Datos del paciente</legend>
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan" required>
+                        <span class="error"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Ej: Pérez López" required>
+                        <span class="error"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="dni">DNI:</label>
+                        <input type="text" id="dni" name="dni" placeholder="12345678A" required>
+                        <span class="error"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" name="telefono" placeholder="600123456" required>
+                        <span class="error"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                        <span class="error"></span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos de la cita</legend>
+                    <div class="campo">
+                        <label for="fechaCita">Fecha y hora:</label>
+                        <input type="datetime-local" id="fechaCita" name="fechaCita" required>
+                        <span class="error"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="observaciones">Observaciones:</label>
+                        <textarea id="observaciones" name="observaciones" rows="3" placeholder="Ej: Paciente alérgico a penicilina"></textarea>
+                        <span class="error"></span>
+                    </div>
+                </fieldset>
+
+                <div class="acciones">
+                    <button type="submit" id="guardarBtn">Guardar Cita</button>
+                    <button type="reset" id="limpiarBtn">Limpiar formulario</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- TABLA DE CITAS -->
+        <section id="listadoCitas">
+            <h2>Listado de citas</h2>
+            <table id="tablaCitas">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>DNI</th>
+                        <th>Teléfono</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Fecha Cita</th>
+                        <th>Observaciones</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla">
+                    <tr class="vacio"><td colspan="9">Dato vacío</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p><strong>Clínica DavanteDent</strong></p>
+        <p>Teléfono: 914 253 487 | E-mail: infoclinica@davantedent.com</p>
+        <p>Dirección: C/San Sebastián 7, Marbella, España</p>
+    </footer>
+
+    <!-- ARCHIVO JS -->
+    <script src="app.js"></script>
+</body>
+</html>

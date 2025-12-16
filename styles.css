@@ -1,0 +1,174 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ===== CABECERA ===== */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #cea7d4;
+  padding: 20px 0;
+  border-bottom: 4px solid #b97ec2;
+}
+
+#logo {
+  width: 70%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin-top: 10px;
+  font-size: 1.8em;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== CONTENIDO ===== */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== FORMULARIO ===== */
+fieldset {
+  border: 2px solid #cea7d4;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+legend {
+  font-weight: bold;
+  color: #6b2c79;
+}
+
+.campo {
+  margin-bottom: 12px;
+  text-align: left;
+  position: relative;
+}
+
+.campo input,
+.campo textarea {
+  width: 80%;
+  max-width: 400px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #b97ec2;
+  outline: none;
+}
+
+/* ===== MENSAJES DE ERROR ===== */
+.error {
+  color: #d93025;
+  font-size: 0.85em;
+  margin-left: 5px;
+  display: block;
+  height: 18px; /* Mantener espacio aunque no haya mensaje */
+}
+
+input.error,
+textarea.error {
+  border-color: #d93025;
+  background-color: #ffe6e6;
+}
+
+/* ===== BOTONES ===== */
+button {
+  background-color: #cea7d4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #b97ec2;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== TABLA ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 0.95em;
+}
+
+th {
+  background-color: #cea7d4;
+  color: white;
+}
+
+tr.vacio td {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+/* ===== PIE ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #eee;
+  font-size: 0.9em;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #logo {
+    width: 100%;
+    height: 180px;
+  }
+
+  main {
+    width: 95%;
+    padding: 10px;
+  }
+
+  #formcita .campo input,
+  #formcita .campo textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+}
